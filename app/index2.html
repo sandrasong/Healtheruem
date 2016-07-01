@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Healthereum </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link href="./app2.css" rel='stylesheet' type='text/css'>
+  <script src="./app2.js"></script>
+</head>
+
+<body>
+  <div id="root">
+    <div id="page1">
+      <header>
+        <div class="row">
+          <div class="col-sm-8">
+            <h1>Real-I</h1>
+          </div>
+          <div id="profile">
+            <div class="col-sm-1">
+              <img class="profile" src="../images/docProfile.png">
+            </div>
+            <div class="col-sm-3">
+              <p id="address"> Ox60a25153b...b50b34f </p>
+              <p id="balance">BALANCE  45ETH</p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <nav>
+        <ul>
+          <li>PAST BILLs</li>
+          <li>NEW BILLs</li>
+        </ul>
+      </nav>
+
+      <div id="main" class="container">
+        <h1 style="margin-bottom:20px">New Bill</h1>
+        <form role="form">
+          <!-- 1st row -->
+          <div class="row">
+            <div class="col-sm-6">
+              <label class="form-control-label" for="inputSuccess1">DOCTOR NAME</label>
+            </div>
+            <div class="col-sm-6">
+              <label class="form-control-label" for="inputSuccess1">DATE OF APPOINTMENT</label>
+            </div>
+          </div>
+
+          <!-- 2nd row -->
+          <div class="row break">
+            <div class="col-sm-6">
+              <p>Dr. Mary Oliver</p>
+            </div>
+            <div class="col-sm-3">
+             <input type="text" class="form-control" value="June 09, 2016">
+           </div>
+           <!--  <div class="col-sm-3"></div> -->
+         </div>
+
+         <!-- 3rd row -->
+         <div class="row">
+          <div class="col-sm-4">
+            <label class="form-control-label" for="inputSuccess1">PATIENT ADDRESS</label>
+          </div>
+        </div>
+
+        <!-- 4th row -->
+        <div class="row break">
+          <div class="col-sm-7">
+            <input type="text" class="form-control" >
+          </div>
+        </div>
+
+        <!-- 5th row -->
+        <div class="row">
+          <div class="col-sm-6">
+            <label class="form-control-label" for="inputSuccess1">SERVICES</label>
+          </div>
+          <div class="col-sm-6">
+            <label class="form-control-label" for="inputSuccess1">PRICE</label>
+          </div>
+        </div>
+
+        <!-- 6th row -->
+        <section id="services" class="row break">
+
+          <div  class="col-sm-9 serviceItem">
+            <div class="col-sm-9 serviceSelector">
+              <!-- <input type="text" class="form-control" > -->
+              <select class="form-control col-sm-9 selectedBox">
+                <option value="Check-up">Check-up</option>
+                <option value="X-Ray">X-Ray</option>
+                <option value="MRI">Magnetic Resonance Imaging</option>
+              </select>
+            </div>
+            <div class="col-sm-2">
+              <input type="text" class="form-control price" >
+            </div>
+            <div class="ETH col-sm-1">
+              <span>ETH    </span>
+              <span class="glyphicon glyphicon-trash"></span>
+            </div>
+          </div>
+
+          <div class="col-sm-3"><button id="addService" class="glyphicon glyphicon-plus"></button></div>
+         </section>
+      </form>
+
+        <!-- table -->
+        <section class="row">
+        <div class="col-sm-7"></div>
+        <div class="calcuTable col-sm-5">
+          <table style="width: 80%" id="billTable"> 
+         <!--  <tr class="row1"><td></td><td></td></tr>
+          <tr class="row2"><td></td><td></td></tr>
+          <tr class="row3"><td></td><td></td></tr> -->
+          
+        </table>    
+        </div>
+
+        <button type="submit" onclick="switchPage()" class="btn btn-primary" style="float:right; margin:0 100px 0 20px">SIGN & SEND</button>
+        <button type="cancel" class="btn btn-default" style="float:right">CANCEL</button>
+      
+    </div>
+
+    <footer class="row">
+      <span class="col-sm-9 copyright">Copyright © <strong>Healthereum 2016</strong>. All Rights Reserved
+     </span>
+     <div class="col-sm-3">
+      <span>A <strong>ConsenSys</strong> Project</span>
+      <img src="../images/consensys-logo-white.png" style="display:inline-block;">
+    </footer>
+  </div> <!-- page 1-->
+
+
+  <div id="page2">
+    <header>
+      <div class="row">
+        <div class="col-sm-8">
+          <h1>Real-I</h1>
+        </div>
+        <div id="profile">
+          <div class="col-sm-1">
+            <img class="profile" src="../images/mikeProfilePhoto.png">
+          </div>
+          <div class="col-sm-3">
+            <p id="address"> Ox60a25153b...b50b34f </p>
+            <p id="balance">BALANCE  45ETH</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <nav>
+      <ul>
+        <li>PAST BILLs</li>
+        <li>NEW BILLs</li>
+      </ul>
+    </nav>
+
+    <div id="main" class="container">
+      <!-- 1st row -->
+      <div class="row">
+        <div class="col-sm-6">
+          <label class="form-control-label" for="inputSuccess1">DOCTOR NAME</label>
+        </div>
+        <div class="col-sm-6">
+          <label class="form-control-label" for="inputSuccess1">DATE OF APPOINTMENT</label>
+        </div>
+      </div>
+
+      <!-- 2nd row -->
+      <div class="row break">
+        <div class="col-sm-6">
+          <p>Dr. Mary Oliver</p>
+        </div>
+        <div class="col-sm-3">
+         <input type="text" class="form-control" value="June 09, 2016">
+       </div>
+       <!--  <div class="col-sm-3"></div> -->
+     </div>
+
+     <!-- 3rd row -->
+     <div style="border-bottom:1px solid #979797" class="row">
+      <div class="col-sm-6">
+        <label class="form-control-label" for="inputSuccess1">SERVICES</label>
+      </div>
+      <div class="col-sm-3">
+        <label class="form-control-label" for="inputSuccess1">PRICE</label>
+      </div>
+    </div>
+
+    <table class="table table-striped table-hover ">
+      <tbody>
+        <tr>
+          <div class="row">
+            <td class="col-sm-6">Check-up</td>
+            <td class="col-sm-3">15 ETH</td>
+            <td class="col-sm-3"><button class="btn btn-default">Dispute</button></td>
+          </div>
+        </tr>
+        <tr>
+          <td class="col-sm-6">Column content</td>
+          <td class="col-sm-3">15 ETH</td>
+          <td class="col-sm-3"><button class="btn btn-default">Dispute</button></td>
+        </tr>
+        <tr>
+          <td class="col-sm-6">Column content</td>
+          <td class="col-sm-3">15 ETH</td>
+          <td class="col-sm-3"><button class="btn btn-default">Dispute</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <section id="billingDate"><span>Billing Date: June 11, 2016</span></section>
+
+    <div class="row">
+      <div class="col-sm-6"></div>
+      <div class="col-sm-2">
+        <img src="../images/piechart.png" alt="we cover 80%">
+      </div>
+      <div class="col-sm-4">
+        <table id="patientCalculator" style="width: 80%">
+          <tr><td>Medical Bill</td><td>35 ETH</td></tr>
+          <tr style="border-bottom: 1px solid #979797">
+            <td>Plan Covers</td><td>-28 ETH</td>
+          </tr>
+          <tr><td>Amount</td><td>7 ETH</td></tr>
+        </table>    
+      </div>
+    </div>
+  <button type="submit" onclick="alertBox()" class="btn btn-primary" style="float:right; margin:0 100px 0 20px">SIGN & SEND</button>
+  <button type="cancel" class="btn btn-default" style="float:right">I don't recognize this bill.</button>
+  </div>
+
+<footer class="row">
+      <span class="col-sm-9 copyright">Copyright © <strong>Healthereum 2016</strong>. All Rights Reserved
+     </span>
+     <div class="col-sm-3">
+      <span>A <strong>ConsenSys</strong> Project</span>
+      <img src="../images/consensys-logo-white.png" style="display:inline-block;">
+    </footer>
+</div> <!-- page 2 -->
+</div>
+</body>
+</html>

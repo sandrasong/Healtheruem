@@ -1,0 +1,89 @@
+@import "mixins.scss";
+
+
+$blue: #2196F3;
+$darkblue: #0A6EBD;
+
+#page1{
+	display: block;
+}
+#page2{
+	display: none;
+}
+body {
+  margin-left: 10%;
+  margin-right: 10%;
+  font-family: "Open Sans", sans-serif;
+}
+
+header{
+	background-color: $blue;
+}
+
+.profile{
+	width: 80px;
+}
+footer{
+	background-color: $blue;
+	height: 70px;
+	margin-top: 20px;
+	span{
+		padding-top: 25px; 
+		padding-right: 5px;
+		font-size: 1.2rem;
+	}
+	img{
+		padding-top: 8px;
+	}
+}
+
+nav{
+	margin: 0 0 40px 0;
+	padding: 10px 0;
+	background-color: $darkblue;
+	ul {
+		li{
+		margin: 0 20px;
+		display: inline-block;
+		}
+	}
+
+}
+
+.ETH{
+	padding:0;
+	span{
+		padding: 5px 0;
+	}
+}
+.break{
+	margin-bottom: 20px;
+}
+.serviceSelector{
+ padding-left: 0;
+}
+.serviceItem, #addService{
+	margin: 5px 0;
+}
+#addService{
+	border: none;
+	background: transparent;
+	outline: none;
+}
+
+.table>tbody>tr>td{
+	padding: 8px 0;
+} 
+
+#billingDate{
+	@include clearfix;
+}
+
+#patientCalculator{
+	margin-top: 8%;
+	margin-bottom: 8%;
+	// background-color: $blue;
+	& tr td{
+		padding: 10px 0;
+	}
+}
